@@ -10,7 +10,19 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  let arreglo =[];
+for (let x in objeto){
+    arreglo.push([x, objeto[x]])
+  }
+return arreglo;
 }
+
+let objeto = {
+  D: 1,
+  B: 2,
+  C: 3
+}
+console.log(deObjetoAmatriz(objeto));
 
 
 function numberOfCharacters(string) {
@@ -18,7 +30,16 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  let obj = {}
+  for (let i = 0; i < string.length; i++){
+    if (Object.keys(obj).includes(string[i])){
+      obj[string[i]] += 1
+    }
+    else obj[string[i]]=1
+  }
+  return obj
 }
+numberOfCharacters("adsjfdsfsfjsdjfhacabcsbajda")
 
 
 function capToFront(s) {
@@ -26,6 +47,7 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+
 }
 
 
